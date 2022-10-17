@@ -42,7 +42,7 @@
                         <h6 class="texto1">Le enviaremos un correo electrónico con más instrucciones para restablecer su contraseña</h6>
                         <ion-item>
                             <ion-icon name="mail-sharp"class="icon-login"></ion-icon>
-                            <ion-input name="user" type="text" required placeholder="Correo electrónico"></ion-input>
+                            <ion-input name="user" type="text" required placeholder="Correo electrónico" #txtReset></ion-input>
                         </ion-item>
                     </ion-list>
                 </ion-col>
@@ -50,7 +50,7 @@
             <ion-row>
                 <ion-col>
                     <div class="form-group" style="margin-top: 12px ;">
-                        <button class="button button-5" (click)="presentAlert()"> Restablecer</button>
+                        <button class="button button-5" (click)="onReset(txtReset)"> Restablecer</button>
                         
                       </div>
                 </ion-col>
