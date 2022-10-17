@@ -32,9 +32,9 @@ export class LoginPage implements OnInit {
     const auth = getAuth();
     firebase.onAuthStateChanged(auth,function(user) {
       if (user) {
-        console.log('Usuario inciado:',user.displayName)
+        console.log('Usuario inciado :',user.displayName)
       }else {
-        console.log('No login')
+        console.log('Error')
       }
     });
   }
@@ -74,9 +74,9 @@ export class LoginPage implements OnInit {
     if (this.usuario.email === email.value && this.usuario.pass === pass.value && this.usuario.tipo === "Pasajero") {
       this.loginFire(this.usuario.email, this.usuario.pass)
       this.router.navigate(['/home']); 
-    } else if (this.usuario.email === email.value && this.usuario.pass === pass.value && this.usuario.tipo === "Conductor") {
-      this.loginFire(this.usuario.email, this.usuario.pass)
-      this.router.navigate(['/home-conductor']);
+    } else if ( this.usuario.email === email.value && this.usuario.pass === pass.value && this.usuario.tipo === 'Conductor'){
+      this.loginFire(this.usuario.email,this.usuario.pass)
+      this.router.navigate(['/home-conductor'])
     } else {
       this.servicio.mensaje('Error en la credenciales')
       this.claseMensaje = "padcor"

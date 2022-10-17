@@ -33,7 +33,7 @@ const routes: Routes = [
     loadChildren: () => import('./historial/historial.module').then( m => m.HistorialPageModule)
   },
   {
-    path: 'home-conductor/:user',
+    path: 'home-conductor',
     loadChildren: () => import('./home-conductor/home-conductor.module').then( m => m.HomeConductorPageModule)
   },
   {
@@ -45,7 +45,7 @@ const routes: Routes = [
     loadChildren: () => import('./configuracion/configuracion.module').then( m => m.ConfiguracionPageModule)
   },
   {
-    path: 'perfil/:user',
+    path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
@@ -63,6 +63,10 @@ const routes: Routes = [
   {
     path: 'registro',
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'strapip',
+    loadChildren: () => import('./strapip/strapip.module').then( m => m.StrapipPageModule)
   }
 ];
 

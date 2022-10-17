@@ -175,15 +175,16 @@ padding: 5px;
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
 
-  padding: 5px 10px;
+  padding: 18px;
   border-radius: 5px;
   color: #212121;
   font-size: 16px;
   font-weight: 600;
-  margin: 0 15px;
+  margin: 10 15px;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
 .button-5 {
@@ -199,7 +200,7 @@ padding: 5px;
   right: 0;
   border-bottom: 3px solid #212121;
   border-right: 3px solid #212121;
-  transition: all 0.4s, opacity 0.1s 0.4s;
+  transition: all 0.2s, opacity 0.1s 0.2s;
   opacity: 0;
 }
 
@@ -212,13 +213,13 @@ padding: 5px;
   left: 0;
   border-top: 3px solid #212121;
   border-left: 3px solid #212121;
-  transition: all 0.4s, opacity 0.1s 0.4s;
+  transition: all 0.2s, opacity 0.1s 0.2s;
   opacity: 0;
 }
 
 .button-5:hover:after, .button-5:hover:before {
-  width: calc(93% + 0px);
-  height: calc(93% + 0px);
-  transition: all 0.4s, opacity 0.1s;
+  width: calc(93% + 1px);
+  height: calc(93% + 1px);
+  transition: all 0.2s, opacity 0.1s;
   opacity: 1;
 }
