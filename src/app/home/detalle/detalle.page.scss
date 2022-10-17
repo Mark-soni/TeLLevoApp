@@ -1,0 +1,40 @@
+.btnDetalle {
+    color: black;
+    background-color: white;
+    box-shadow: white;
+    border-radius: 5px;
+}
+.pruebita{
+    height: 300px;
+    justify-content: center;
+    display: flexbox;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+}
+.arreglotexto{
+    font-size: 16px;
+}
+
+.contaier-login {
+    margin-top: 80px;
+    width: 90%;
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    display: flex;
+    display: flexbox;
+  
+  }
+
+.color {
+    color: gray;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+    font-size: medium;
+  }  

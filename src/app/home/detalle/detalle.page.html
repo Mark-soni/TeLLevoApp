@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title style="justify-content:center ;">Detalle</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!--<ion-buttons slot="end">
+      <ion-button color="danger" (click)="Eliminar()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>-->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="color">
+      <img src="{{ conductor.imagen }}" alt="">
+
+      <ion-card-header>
+        <ion-card-subtitle>{{ conductor.tipoAuto }} 
+        <ion-icon name="person-sharp"></ion-icon> 
+        {{ conductor.capacidad }} 
+        </ion-card-subtitle>
+        <ion-card-title class="nombreC"> 
+          {{ conductor.nombre }} 
+        </ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-content > Precio: {{ conductor.precio }} </ion-card-content>
+    <ion-card-content> Patente: {{ conductor.patente }} </ion-card-content>
+    <ion-card-content> Hora esparada: {{ conductor.hora }} 
+    Area: {{ conductor.area }}</ion-card-content>
+  </ion-card>
+
+
+  
+  <ion-card class="color">
+    <ion-card-header>
+      <ion-card-subtitle>En esta posicion se encuntra su conductor: </ion-card-subtitle>  
+    <img class="pruebita" src="./assets/gps.jpg"/>
+    </ion-card-header>
+
+  </ion-card>
+    <ion-button (click)="presentAlert2()" class="btnDetalle" expand="block" fill="outline" (click)="showModal()">Tomar viaje</ion-button>
+
+
+    <!--Posible mapa funcional?-->
+</ion-content>
