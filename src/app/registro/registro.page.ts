@@ -20,19 +20,12 @@ export class RegistroPage implements OnInit {
     try{
       const aux = this.servicio.registrar2(user.value, email.value, pass.value, tipo.value)
       if (aux) {
-        //this.guardar.guardarU(user.value, email.value, pass.value, tipo.value)
         console.log(user)
-        this.servicio.mensaje('El usuario a sido creado existosamente')
+        this.servicio.mensaje('El usuario a sido creado existosamente.')
       }
     } catch (error){
       console.log('Error->',error)
     }
   }
-
-  //async guardarU(user, email, pass, tipo) {
-    //this.guardar.guardarU(user.value, email.value, pass.value, tipo.value)
-    //console.log(tipo.value);
-  //}
-  
 }
 

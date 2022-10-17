@@ -100,7 +100,7 @@ export class FirebaseService {
 
     if (usuariotemp) {
       this.createDoc(usuariotemp,'UsuarioDuoc', usuariotemp.uid);
-      this.mensaje('Usario registrado');
+      this.mensaje('Usario registrado, verifique su correo');
       console.log(usuariotemp);
     }
   }
