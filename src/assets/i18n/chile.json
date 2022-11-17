@@ -8,7 +8,7 @@
     "Cerrar sesión"         : "Cierre la sesión" ,
     "Historial"             : "Borrelo para que no lo cachen",
     "Ayuda"                 : "Ayuda estan matando un weon",
-    "Auto Disponible"       : "Auto Desocupado",
+    "Auto Disponible"       : "Autos Desocupado",
     "|¿A dónde vas?"        : "|¿A dónde va tí@?",
     "Iniciar Sesión"        : "Inicio la Sesión",
     "Registrar"             : "Registrese",
@@ -20,7 +20,7 @@
     "Le enviaremos un correo electrónico con más instrucciones para restablecer su contraseña." : "Le enviamos un correo reviselo y siga las instrucciones para recupar la contra.",
     "Restablecer"               : "Restablecer",
     "Para mas ayuda contactar al TellevoApp@duocuc.cl" : "Para mas ayuda escribano al TellevoApp@duocuc.cl",
-    "Mi perfil"             : "La facha maxima",
+    "Mi perfil"             : "La ficha maxima",
     "Pago"                  : "Los pagos",
     "Modo oscuro"           : "Modo Negro",
     "Conectarse"            : "Conectarse",
@@ -32,5 +32,8 @@
     "Precio"                : "Precio",
     "Imagen"                : "Imagen" ,
     "Patente"               : "Patente" ,
-    "Nombre"                : "Nombre" 
+    "Nombre"                : "Nombre",
+    "Tomar viaje"           : "Tomar viaje",
+    "En esta posicion se encuntra su conductor": "En esta posicion se encuntra su conductor",
+    "Hora esparada"         : "Hora esparada"
 }

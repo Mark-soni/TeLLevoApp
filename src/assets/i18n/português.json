@@ -32,5 +32,8 @@
     "Precio"                : "Preço",
     "Imagen"                : "Imagem" ,
     "Patente"               : "Patente" ,
-    "Nombre"                : "Nome" 
+    "Nombre"                : "Nome",
+    "Tomar viaje"           : "fazer viagem",
+    "En esta posicion se encuntra su conductor": "Nesta posição está o seu motorista",
+    "Hora esparada"         : "tempo esperado"
 }

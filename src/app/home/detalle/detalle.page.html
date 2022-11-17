@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title style="justify-content:center ;">Detalle</ion-title>
+    <ion-title style="justify-content:center ;"></ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -26,22 +26,22 @@
         </ion-card-title>
       </ion-card-header>
     
-      <ion-card-content > Precio: {{ conductor.precio }} </ion-card-content>
-    <ion-card-content> Patente: {{ conductor.patente }} </ion-card-content>
-    <ion-card-content> Hora esparada: {{ conductor.hora }} 
-    Area: {{ conductor.area }}</ion-card-content>
+      <ion-card-content > {{ "Precio" | translate }}: {{ conductor.precio }} </ion-card-content>
+    <ion-card-content> {{ "Patente" | translate }}: {{ conductor.patente }} </ion-card-content>
+    <ion-card-content> {{ "Hora esparada" | translate }}: {{ conductor.hora }} 
+    {{ "Área" | translate }}: {{ conductor.area }}</ion-card-content>
   </ion-card>
 
 
   
   <ion-card class="color">
     <ion-card-header>
-      <ion-card-subtitle>En esta posicion se encuntra su conductor: </ion-card-subtitle>  
+      <ion-card-subtitle>{{ "En esta posicion se encuntra su conductor" | translate }}: </ion-card-subtitle>  
     <img class="pruebita" src="./assets/gps.jpg"/>
     </ion-card-header>
 
   </ion-card>
-    <ion-button (click)="presentAlert2()" class="btnDetalle" expand="block" fill="outline" (click)="showModal()">Tomar viaje</ion-button>
+    <ion-button (click)="presentAlert2()" class="btnDetalle" expand="block" fill="outline" (click)="showModal()">{{ "Tomar viaje" | translate }}</ion-button>
 
 
     <!--Posible mapa funcional?-->

@@ -32,5 +32,8 @@
     "Precio"                : "가격",
     "Imagen"                : "영상" ,
     "Patente"               : "특허" ,
-    "Nombre"                : "이름" 
+    "Nombre"                : "이름",
+    "Tomar viaje"           : "여행하다",
+    "En esta posicion se encuntra su conductor": "이 위치에 드라이버가 있습니다.",
+    "Hora esparada"         : "예상 시간"
 }
