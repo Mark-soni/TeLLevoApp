@@ -65,6 +65,7 @@ export class FirebaseService {
     await this.loadingAux.present();
   }
   //OK
+  
   async cerrarLoading() {
     await this.loadingAux.dismiss();
   }
@@ -100,7 +101,7 @@ export class FirebaseService {
 
     if (usuariotemp) {
       this.createDoc(usuariotemp,'UsuarioDuoc', usuariotemp.uid);
-      this.mensaje('Usario registrado, verifique su correo');
+      this.mensaje('Verifique su correo');
       console.log(usuariotemp);
     }
   }

@@ -46,19 +46,19 @@
                 <br />
 
                 <ion-item>
-                  <ion-icon name="eye-off"></ion-icon>
-                  <ion-input name="password" type="password" required placeholder="Contraseña" #txtPass></ion-input>
+                  <ion-icon  name="eye-off"></ion-icon>
+                  <ion-input class="colors" name="password" type="password" required placeholder="Contraseña" #txtPass></ion-input>
                 </ion-item>
 
                 <ion-list>
-                  <ion-radio-group [allowEmptySelection]="false" value="" #rTipo>
+                  <ion-radio-group class="a" [allowEmptySelection]="false" value="" #rTipo>
                     <ion-item>
                       <ion-label>Pasajero</ion-label>
                       <ion-radio slot="end" value="Pasajero"></ion-radio>
                     </ion-item>
                     <ion-item>
                       <ion-label>Conductor</ion-label>
-                      <ion-radio slot="end" value="Conductor"></ion-radio>
+                      <ion-radio class="colors" slot="end" value="Conductor"></ion-radio>
                     </ion-item>
                   </ion-radio-group>
                 </ion-list>

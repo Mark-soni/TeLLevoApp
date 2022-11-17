@@ -54,6 +54,10 @@ export class LoginPage implements OnInit {
     )
   }
 
+  
+
+
+
   onGoogleLogin() {
     var provider = new firebase.GoogleAuthProvider();
     const auth = getAuth();
@@ -71,6 +75,7 @@ export class LoginPage implements OnInit {
 
   async login(email, pass) {
     this.usuario = this.obtenerUsEs(email.value, pass.value)
+    console.log(this.usuario)
     if (this.usuario.email === email.value && this.usuario.pass === pass.value && this.usuario.tipo === "Pasajero") {
       this.loginFire(this.usuario.email, this.usuario.pass)
       this.router.navigate(['/home']); 
@@ -79,7 +84,6 @@ export class LoginPage implements OnInit {
       this.router.navigate(['/home-conductor'])
     } else {
       this.servicio.mensaje('Error en la credenciales')
-      this.claseMensaje = "padcor"
     }
   }
 

@@ -183,4 +183,25 @@ export class HomePage implements OnInit{
     this.fire.logout();
     this.router.navigate(['/login']);
   }
+
+  //doStart(event) {
+    //console.log('Estoy en start');
+
+  //}
+  
+  //doPull(event) {
+    //console.log('Estoy en pull');
+  //}
+
+  //doRefresher(event) {
+    //console.log('Estoy en refresher');
+    //console.log('Begin async operation');
+    
+    //setTimeout(() => {
+      //console.log('Async operation has ended');
+    //event.target.complete();
+    //}, 2000);
+  //}
+
+
 }
