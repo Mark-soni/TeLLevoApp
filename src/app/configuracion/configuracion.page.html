@@ -29,7 +29,7 @@
 
   <ion-item class="select">
     <ion-label>{{ "selecciona" | translate }}</ion-label>
-    <ion-select cancelText="Cancel" [(ngModel)]="idioma" placeholder="Selecciona" (ionChange)="changeLang($event)">
+    <ion-select cancelText="Cancel" [(ngModel)]="idioma" placeholder="Lenguas" (ionChange)="changeLang($event)">
       <ion-select-option *ngFor="let aux of langs">{{ aux }}</ion-select-option>
     </ion-select>
   </ion-item>
