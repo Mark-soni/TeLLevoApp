@@ -6,6 +6,7 @@ import { MenuController } from '@ionic/angular';
 import { FirebaseService } from '../services/firebase.service';
 import { HomeService } from '../home/home.service';
 import { Homec } from './homec';
+import { TranslateService } from '@ngx-translate/core';
 declare var google;
 
 @Component({
@@ -18,13 +19,19 @@ export class HomeConductorPage implements OnInit {
   cliente: string
   conductor = []
   usuario: any;
+  langs: string[] = [];
 
   constructor(private servicio: HomeService,
     private router: Router,
     private menu: MenuController,
     private activatedRoute: ActivatedRoute,
     private alerta: AlertController,
-    private fire: FirebaseService) {}
+    private fire: FirebaseService,
+    private translateService: TranslateService) {
+      this.langs = this.translateService.getLangs();
+    }
+
+    
 
 
     ngOnInit() {

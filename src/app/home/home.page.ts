@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 import { MenuController } from '@ionic/angular';
 import { FirebaseService } from '../services/firebase.service';
 import { Homes } from './homes';
+import { TranslateService } from '@ngx-translate/core';
 declare var google;
 
 /*interface Marker {
@@ -26,13 +27,19 @@ export class HomePage implements OnInit{
   cliente: string
   conductor = []
   usuario: any;
+  langs: string[] = [];
 
   constructor(private servicio: HomeService,
               private router: Router,
               private menu: MenuController,
               private activatedRoute: ActivatedRoute,
               private alerta: AlertController,
-              private fire: FirebaseService) {}
+              private fire: FirebaseService,
+              private translateService: TranslateService) {
+                this.langs = this.translateService.getLangs();
+              }
+
+              
 
   ngOnInit() {
       //this.conductor = this.servicio.obtenerHomes()= ya no se usa

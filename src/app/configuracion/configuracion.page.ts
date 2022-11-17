@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-configuracion',
@@ -8,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class ConfiguracionPage implements OnInit {
 
   darkMode: boolean = true;
+  langs: string[] = [];
 
-  constructor() { }
+  constructor(private translateService: TranslateService) {
+    this.langs = this.translateService.getLangs(); }
 
   toggleTheme(event) {
     if(event.detail.checked){
@@ -20,6 +23,11 @@ export class ConfiguracionPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    //console.log(event.detail.value)
   }
 
 }
