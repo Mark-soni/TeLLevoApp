@@ -8,12 +8,16 @@ import { HomeConductorPageRoutingModule } from './home-conductor-routing.module'
 
 import { HomeConductorPage } from './home-conductor.page';
 
+// CAMBIO IDIOMA
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomeConductorPageRoutingModule
+    HomeConductorPageRoutingModule,
+    TranslateModule
   ],
   declarations: [HomeConductorPage]
 })

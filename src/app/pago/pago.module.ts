@@ -8,12 +8,16 @@ import { PagoPageRoutingModule } from './pago-routing.module';
 
 import { PagoPage } from './pago.page';
 
+// CAMBIO IDIOMA
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PagoPageRoutingModule
+    PagoPageRoutingModule,
+    TranslateModule
   ],
   declarations: [PagoPage]
 })

@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { StrapipPage } from './strapip.page';
 
+// CAMBIO IDIOMA
+import { TranslateModule } from '@ngx-translate/core';
+
 const routes: Routes = [
   {
     path: '',
@@ -11,7 +14,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes),
+    TranslateModule],
   exports: [RouterModule],
 })
 export class StrapipPageRoutingModule {}

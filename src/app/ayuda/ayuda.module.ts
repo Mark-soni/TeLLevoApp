@@ -8,12 +8,16 @@ import { AyudaPageRoutingModule } from './ayuda-routing.module';
 
 import { AyudaPage } from './ayuda.page';
 
+// CAMBIO IDIOMA
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AyudaPageRoutingModule
+    AyudaPageRoutingModule,
+    TranslateModule
   ],
   declarations: [AyudaPage]
 })

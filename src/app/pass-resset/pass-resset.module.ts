@@ -9,13 +9,17 @@ import { PassRessetPageRoutingModule } from './pass-resset-routing.module';
 
 import { PassRessetPage } from './pass-resset.page';
 
+// CAMBIO IDIOMA
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     PassRessetPageRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule
   ],
   declarations: [PassRessetPage]
 })

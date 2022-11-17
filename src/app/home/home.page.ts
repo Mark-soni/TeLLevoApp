@@ -25,7 +25,6 @@ export class HomePage implements OnInit{
 
   cliente: string
   conductor = []
-  Titulo = "Auto Disponibles"
   usuario: any;
 
   constructor(private servicio: HomeService,

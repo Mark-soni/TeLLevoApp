@@ -8,12 +8,16 @@ import { SplashscreenPageRoutingModule } from './splashscreen-routing.module';
 
 import { SplashscreenPage } from './splashscreen.page';
 
+// CAMBIO IDIOMA
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SplashscreenPageRoutingModule
+    SplashscreenPageRoutingModule,
+    TranslateModule
   ],
   declarations: [SplashscreenPage]
 })

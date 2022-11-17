@@ -8,12 +8,16 @@ import { AgregarPageRoutingModule } from './agregar-routing.module';
 
 import { AgregarPage } from './agregar.page';
 
+// CAMBIO IDIOMA
+import { TranslateModule } from '@ngx-translate/core';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AgregarPageRoutingModule
+    AgregarPageRoutingModule,
+    TranslateModule
   ],
   declarations: [AgregarPage]
 })

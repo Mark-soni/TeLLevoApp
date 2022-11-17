@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title stryle="text-align:left" >⠀⠀Registrar</ion-title>
+    <ion-title stryle="text-align:left" ></ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -26,7 +26,7 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <h1 class="nombreInicio">Registrar</h1>
+            <h1 class="nombreInicio">{{ "Registrar" | translate }}</h1>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -53,18 +53,18 @@
                 <ion-list>
                   <ion-radio-group class="a" [allowEmptySelection]="false" value="" #rTipo>
                     <ion-item>
-                      <ion-label>Pasajero</ion-label>
+                      <ion-label>{{ "Pasajero" | translate }}</ion-label>
                       <ion-radio slot="end" value="Pasajero"></ion-radio>
                     </ion-item>
                     <ion-item>
-                      <ion-label>Conductor</ion-label>
+                      <ion-label>{{ "Conductor" | translate }}</ion-label>
                       <ion-radio class="colors" slot="end" value="Conductor"></ion-radio>
                     </ion-item>
                   </ion-radio-group>
                 </ion-list>
 
                 <ion-col>
-                  <button class="button button-5" (click)="registrar(txtUser, txtEmail, txtPass, rTipo)"> Registrar</button>
+                  <button class="button button-5" (click)="registrar(txtUser, txtEmail, txtPass, rTipo)"> {{ "Registrar" | translate }}</button>
                 </ion-col>
 
             </ion-list>

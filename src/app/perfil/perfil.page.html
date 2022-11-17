@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title stryle="text-align:center" >MI PERFIL</ion-title>
+    <ion-title stryle="text-align:center" >{{ "Mi perfil" | translate }}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -32,19 +32,19 @@
             <ion-col >
               <div  [routerLink]="['/ayuda']">
                 <ion-icon class="por" name="help-buoy-sharp"></ion-icon>
-                <ion-label>Ayuda</ion-label>
+                <ion-label>{{ "Ayuda" | translate }}</ion-label>
               </div>
             </ion-col>
             <ion-col >
               <div  [routerLink]="['/pago']">
                 <ion-icon class="por" name="card-sharp" slot="start"></ion-icon>
-                <ion-label>Ayuda</ion-label>
+                <ion-label>{{ "Pago" | translate }}</ion-label>
               </div>
             </ion-col>
             <ion-col >
               <div  [routerLink]="['/historial']">
                 <ion-icon class="por" name="bookmarks-sharp" slot="start"></ion-icon>
-                <ion-label>Ayuda</ion-label>
+                <ion-label>{{ "Historial" | translate }}</ion-label>
               </div>
             </ion-col>
           </ion-row>
@@ -60,13 +60,13 @@
           </ion-list-header>
           <ion-item>
             <ion-avatar slot="start">
-              <img src="/assets/avatar.svg" />
+              <img src="/assets/img/lucy.jpg" />
             </ion-avatar>
             <ion-label>Lorem ipsum</ion-label>
           </ion-item>
           <ion-item>
             <ion-avatar slot="start">
-              <img src="/assets/avatar.svg" />
+              <img src="/assets/img/lucy.jpg" />
             </ion-avatar>
             <ion-label>
               <h3>Lorem ipsum</h3>
@@ -75,7 +75,7 @@
           </ion-item>
           <ion-item>
             <ion-avatar slot="start">
-              <img src="/assets/avatar.svg" />
+              <img src="/assets/img/lucy.jpg" />
             </ion-avatar>
             <ion-label>
               <h3>Lorem ipsum</h3>
@@ -113,7 +113,7 @@
 
         <ion-item>
           <ion-icon class="modoOscuro" name="moon"> </ion-icon>
-          <ion-label class="letras">⠀Modo oscuro</ion-label>
+          <ion-label class="letras">⠀{{ "Modo oscuro" | translate }}</ion-label>
           <ion-toggle slot="end" (ionChange)='toggleTheme($event)'></ion-toggle>
         </ion-item>
         
