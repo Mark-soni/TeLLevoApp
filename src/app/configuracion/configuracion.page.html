@@ -28,8 +28,8 @@
   <!--Items generales-->
 
   <ion-item class="select">
-    <ion-label>{{ "Lenguaje" | translate }}</ion-label>
-    <ion-select cancelText="Cancel" [(ngModel)]="idioma" placeholder="Lenguaje" (ionChange)="changeLang($event)">
+    <ion-label class="letras">{{ "Lenguaje" | translate }} </ion-label>
+    <ion-select cancelText="Cancel" [(ngModel)]="idioma" placeholder="{{ 'Lenguaje'| translate  }}" (ionChange)="changeLang($event)">
       <ion-select-option *ngFor="let aux of langs">{{ aux }}</ion-select-option>
     </ion-select>
   </ion-item>

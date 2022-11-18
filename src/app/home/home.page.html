@@ -63,9 +63,13 @@
 
  <!--Buscador-->
   <ion-toolbar>
-  <ion-searchbar style="margin-top: 10px;" required placeholder= "|¿A dónde vas?" ></ion-searchbar>
+  <ion-searchbar style="margin-top: 10px;" required placeholder= "{{ '|¿A dónde vas?'| translate  }}" ></ion-searchbar>
   </ion-toolbar>
   <!--Buscador-->
+
+  <!--Mapa-->
+  <div id="map"></div>
+  <!--Mapa-->
 
   <!--Cartas inicio-->
     <ion-list>
@@ -79,8 +83,8 @@
             
           </ion-card-header>
           
-          <ion-card-content > Precio: {{ aux.precio }} </ion-card-content>
-        <ion-card-content> Patente: {{ aux.patente }} </ion-card-content>
+          <ion-card-content > "{{ 'Precio'| translate  }}": {{ aux.precio }} </ion-card-content>
+        <ion-card-content> "{{ 'Patente'| translate  }}": {{ aux.patente }} </ion-card-content>
       </ion-card>
     </ion-item>
     </ion-list>

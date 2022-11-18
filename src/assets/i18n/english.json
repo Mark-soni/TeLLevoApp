@@ -35,5 +35,6 @@
     "Nombre"                : "Name",
     "Tomar viaje"           : "take trip",
     "En esta posicion se encuntra su conductor": "In this position is your driver",
-    "Hora esparada"         : "expected time"
+    "Hora esparada"         : "expected time",
+    "Lenguaje"              : "Language"
 }

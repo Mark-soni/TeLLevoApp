@@ -66,3 +66,19 @@ ion-content {
 .my-custom-menu{
   height: 1700px;
 }
+
+ion-content {
+  #map {
+    margin-top: 4%;
+    border-radius: 2%;
+    width: 100%;
+    height: 90%;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    display: block;
+    &.show-map{
+      opacity: 1;
+    }
+  }
+}
+
