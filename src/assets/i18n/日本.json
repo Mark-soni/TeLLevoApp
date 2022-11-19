@@ -18,7 +18,7 @@
     "Conductor"             : "運転者",
     "Restablecer Contraseña": "パスワードの復元",
     "Le enviaremos un correo electrónico con más instrucciones para restablecer su contraseña." : "パスワードをリセットするための詳細な手順を記載したメールをお送りします。",
-    "Restablecer"               : "戻す",
+    "Restablecer"           : "戻す",
     "Para mas ayuda contactar al TellevoApp@duocuc.cl" : "詳細については、TellevoApp@duocuc.cl までお問い合わせください。",
     "Mi perfil"             : "私のプロフィール",
     "Pago"                  : "支払い",
@@ -42,5 +42,10 @@
     "Contraseña"            : "パスワード",
     "Correo"                : "郵便",
     "Error en la credenciales" : "資格情報エラー",
-    "El usuario a sido creado existosamente." : "ユーザーが正常に作成されました。"   
+    "El usuario a sido creado existosamente." : "ユーザーが正常に作成されました。",
+    "Alerta"                : "アラート", 
+    "Correo Enviado"        : "メールを送信しました",
+    "Le hemos enviado una nueva contraseña"  : "新しいパスワードをお送りしました",
+    "OK"                    : "わかった",
+    "Correo electrónico"    : "Eメール"     
 }

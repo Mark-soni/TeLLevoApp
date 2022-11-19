@@ -42,5 +42,10 @@
     "Contraseña"            : "Password",
     "Correo"                : "Email",
     "Error en la credenciales" : "Credentials error",
-    "El usuario a sido creado existosamente." : "The user has been created successfully."
+    "El usuario a sido creado existosamente." : "The user has been created successfully.",
+    "Alerta"                : "Alert",
+    "Correo Enviado"        : "Email sent",
+    "Le hemos enviado una nueva contraseña"  : "We have sent you a new password",
+    "OK"                    : "OK",
+    "Correo electrónico"    : "Email"
 } 

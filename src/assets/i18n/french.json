@@ -42,5 +42,10 @@
     "Contraseña"            : "Mot de passe",
     "Correo"                : "Courrier",
     "Error en la credenciales" : "Erreur d'identifiants",
-    "El usuario a sido creado existosamente." : "L'utilisateur a été créé avec succès."
+    "El usuario a sido creado existosamente." : "L'utilisateur a été créé avec succès.",
+    "Alerta"                : "Alerte",
+    "Correo Enviado"        : "Email envoyé",
+    "Le hemos enviado una nueva contraseña"  : "Nous vous avons envoyé un nouveau mot de passe",
+    "OK"                    : "d'accord",
+    "Correo electrónico"    : "Courrier électronique"
 }

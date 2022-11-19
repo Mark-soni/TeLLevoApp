@@ -27,7 +27,7 @@
   }
   
   .button-container {
-    display: flex;
+    
     width: 100%;
     min-height: 100vh;
     justify-content: center;
@@ -87,4 +87,47 @@
     transition: all 0.2s, opacity 0.1s;
     opacity: 1;
   }
+
+  ion-content {
+    #map {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 150ms ease-in;
+      display: block;
+      &.show-map{
+        opacity: 1;
+      }
+    }
+  }
+  .menu-header-bg {
+    height: 180px;
+    width: 350px;
+    background-color: #7590d6;
+  }
+  .my-custom-menu{
+    height: 1700px;
+  }
+  
+  ion-content {
+    #map {
+      margin-right: 10%;
+      border-radius: 2%;
+      width: 100%;
+      height: 86%;
+      opacity: 0;
+      transition: opacity 150ms ease-in;
+      display: block;
+      &.show-map{
+        opacity: 1;
+      }
+    }
+  }
+  
+  .BotonP {
+    display: flex;
+    justify-content: center;
+    
+  }
+
   

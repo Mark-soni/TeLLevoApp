@@ -42,5 +42,10 @@
     "Contraseña"            : "Contraseña",
     "Correo"                : "Correo",
     "Error en la credenciales" : "Error en la credenciales",
-    "El usuario a sido creado existosamente." : "El usuario a sido creado existosamente."
+    "El usuario a sido creado existosamente." : "El usuario a sido creado existosamente.",
+    "Alerta"                : "Alerta",
+    "Correo Enviado"        : "Correo Enviado",
+    "Le hemos enviado una nueva contraseña"  : "Le hemos enviado una nueva contraseña",
+    "OK"                    : "OK",
+    "Correo electrónico"    : "Correo electronico"
 }

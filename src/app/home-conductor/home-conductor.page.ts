@@ -9,6 +9,14 @@ import { Homec } from './homec';
 import { TranslateService } from '@ngx-translate/core';
 declare var google;
 
+interface Marker {
+  position: {
+    lat: number,
+    lng: number,
+  };
+  title: string;
+}
+
 @Component({
   selector: 'app-home-conductor',
   templateUrl: './home-conductor.page.html',
@@ -20,24 +28,64 @@ export class HomeConductorPage implements OnInit {
   conductor = []
   usuario: any;
   langs: string[] = [];
+  map = null;
+  markers: Marker[] = [
+    {
+      position: {
+        lat: -33.59857729446596,
+        lng: -70.57907975407208,
+      },
+      title: 'Duoc UC: Sede Puente Alto'
+    },
+  ];
 
   constructor(private servicio: HomeService,
-    private router: Router,
-    private menu: MenuController,
-    private activatedRoute: ActivatedRoute,
-    private alerta: AlertController,
-    private fire: FirebaseService,
-    private translateService: TranslateService) {
+              private router: Router,
+              private menu: MenuController,
+              private activatedRoute: ActivatedRoute,
+              private alerta: AlertController,
+              private fire: FirebaseService,
+              private translateService: TranslateService) {
       this.langs = this.translateService.getLangs();
     }
 
+    loadMap() {
+      // create a new map by passing HTMLElement
+      const mapEle: HTMLElement = document.getElementById('map');
+      // create LatLng object
+      const myLatLng = {lat: -33.59810885062359, lng: -70.57856298587099}; 
+      // create map
+      this.map = new google.maps.Map(mapEle, {
+        center: myLatLng,
+        zoom: 14
+      });
     
+      google.maps.event.addListenerOnce(this.map, 'idle', () => {
+        mapEle.classList.add('show-map');
+        this.renderMarkers();
+      });
+    }
+
+    renderMarkers() {
+      this.markers.forEach(marker => {
+        this.addMarker(marker);
+      });
+    }
+
+    addMarker(marker: Marker) {
+      return new google.maps.Marker({
+        position: marker.position,
+        map: this.map,
+        title: marker.title
+      });
+    }
 
 
     ngOnInit() {
       //this.conductor = this.servicio.obtenerHomes()= ya no se usa
       //this.cliente = this.activatedRoute.snapshot.paramMap.get("user")= ya no se usa
       this.validacion();
+      this.loadMap();
   }
 
   ionViewWillEnter() {
