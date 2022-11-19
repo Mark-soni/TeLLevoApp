@@ -35,19 +35,19 @@
 
               <ion-item>
                 <ion-icon name="person-sharp" class="icon-login"></ion-icon>
-                <ion-input name="user" type="text" required placeholder="Nombre" #txtUser></ion-input>
+                <ion-input name="user" type="text" required placeholder="{{ 'Nombre' | translate }}" #txtUser></ion-input>
               </ion-item>     
 
                 <ion-item>
                   <ion-icon name="mail-sharp" class="icon-login"></ion-icon>
-                  <ion-input name="user" type="text" required placeholder="Correo" #txtEmail></ion-input>
+                  <ion-input name="user" type="text" required placeholder="{{ 'Correo' | translate }}" #txtEmail></ion-input>
                 </ion-item>
 
                 <br />
 
                 <ion-item>
                   <ion-icon  name="eye-off"></ion-icon>
-                  <ion-input class="colors" name="password" type="password" required placeholder="Contraseña" #txtPass></ion-input>
+                  <ion-input class="colors" name="password" type="password" required placeholder="{{ 'Contraseña' | translate }}" #txtPass></ion-input>
                 </ion-item>
 
                 <ion-list>

@@ -5,7 +5,8 @@ import { FirebaseService } from '../services/firebase.service';
 //import { LoginService } from './login.service';
 import { Usuario } from './usuario';
 import * as firebase from "firebase/auth"
-import { AuthProvider, getAuth } from 'firebase/auth'; 
+import { AuthProvider, getAuth } from 'firebase/auth';
+import { TranslateService } from '@ngx-translate/core'; 
 
 @Component({
   selector: 'app-login',
@@ -17,15 +18,29 @@ export class LoginPage implements OnInit {
   usuario: Usuariotemporal
   private usuarios = []
   mensaje: string
+  langs: string[] = [];
   claseMensaje   : string
+  msg : string
+  creacionAlert : string
+  suxAlert : string
 
   //private servicio: LoginService
 
-  constructor(private servicio: FirebaseService, private router: Router) { }
+  constructor(
+              private servicio: FirebaseService, 
+              private router: Router, 
+              private translateService: TranslateService) {
+                this.langs = this.translateService.getLangs();
+              }
 
   ngOnInit() {
     this.obtenerUsuario();
     this.verificarLogin();
+  }
+
+  changeLang(event) {
+    this.translateService.use(event.detail.value);
+    //console.log(event.detail.value)
   }
 
   async verificarLogin(){
@@ -86,6 +101,42 @@ export class LoginPage implements OnInit {
       this.servicio.mensaje('Error en la credenciales')
     }
   }
+
+  //Dudas
+  async obtenerPalabrasAlert() {
+    this.translateService.get('Cuenta Registrada en la base de datos').subscribe(
+      (res: string) => {
+        this.msg = res
+      }
+    )
+    this.translateService.get('Creación de cuenta').subscribe(
+      (res: string) => {
+        this.creacionAlert = res
+      }
+    )
+    this.translateService.get('Se ha creado su cuenta').subscribe(
+      (res: string) => {
+        this.suxAlert = res
+      }
+    )
+  }
+
+  async registrar(nombre, email, pass) {
+    try{
+      const user = this.servicio//.registrar(email.value,pass.value)
+      if (user) {
+        console.log('User->',user)
+        //this.presentAlert();
+        //this.guard.GuardarServicio(nombre.value,email.value,pass.value)
+        this.servicio.mensaje(this.msg)
+        console.log('value->')
+      } 
+    }catch (error){
+      console.log('Error->',error)
+    }
+  }
+
+  //Dudas
 
   async loginFire(email, pass) {
     try {

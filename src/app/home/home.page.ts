@@ -29,6 +29,15 @@ export class HomePage implements OnInit{
   usuario: any;
   langs: string[] = [];
   map = null;
+  markers: Marker[] = [
+    {
+      position: {
+        lat: -33.59857729446596,
+        lng: -70.57907975407208,
+      },
+      title: 'Duoc UC: Sede Puente Alto'
+    },
+  ];
 
   constructor(private servicio: HomeService,
               private router: Router,
@@ -48,11 +57,26 @@ export class HomePage implements OnInit{
     // create map
     this.map = new google.maps.Map(mapEle, {
       center: myLatLng,
-      zoom: 12
+      zoom: 14
     });
   
     google.maps.event.addListenerOnce(this.map, 'idle', () => {
       mapEle.classList.add('show-map');
+      this.renderMarkers();
+    });
+  }
+
+  renderMarkers() {
+    this.markers.forEach(marker => {
+      this.addMarker(marker);
+    });
+  }
+
+  addMarker(marker: Marker) {
+    return new google.maps.Marker({
+      position: marker.position,
+      map: this.map,
+      title: marker.title
     });
   }
 

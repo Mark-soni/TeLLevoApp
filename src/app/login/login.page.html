@@ -38,15 +38,15 @@
                 <ion-col>
                     <ion-list class="fondoInicio">
   
-                        <ion-item>
-                            <ion-icon name="person-sharp" class="icon-login"></ion-icon>
-                            <ion-input name="user" type="text" required placeholder="Usuario" #txtEmail></ion-input>
-                        </ion-item>
-                        <br />
-                        <ion-item>
-                          <ion-icon name="lock-closed-sharp" class="contra"></ion-icon>
-                            <ion-input name="password" type="password" required placeholder="Contraseña" #txtPass></ion-input>
-                        </ion-item>
+                      <ion-item>
+                        <ion-icon name="person-sharp" class="icon-login"></ion-icon>
+                        <ion-input name="user" type="text" required placeholder="{{ 'Usuario' | translate }}" #txtEmail></ion-input>
+                    </ion-item>
+                    <br />
+                    <ion-item>
+                      <ion-icon name="lock-closed-sharp" class="contra"></ion-icon>
+                        <ion-input name="password" type="password" required placeholder="{{ 'Contraseña' | translate }}" #txtPass></ion-input>
+                    </ion-item>
   
                     </ion-list>
                 </ion-col>
@@ -68,12 +68,21 @@
                     </ion-label>
                 </ion-col>
             </ion-row>
+            <div>
+              
+                <img src="/assets/icon/mundo.png" class="mundo" />
+                <ion-select class="select" cancelText="Cancel" [(ngModel)]="idioma" (ionChange)="changeLang($event)">
+                  <ion-select-option *ngFor="let lang of langs">{{ lang }}</ion-select-option>
+                </ion-select>
+              
+            </div>
            <h6 class="alerta {{claseMensaje}}"> {{ mensaje }} </h6>
         </ion-grid>
     </div>
   </ion-slide> 
 <!--Login-->
   
+
 </ion-content>
 
 <!--<ion-row>-->

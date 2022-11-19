@@ -36,5 +36,9 @@
     "Tomar viaje"           : "fazer viagem",
     "En esta posicion se encuntra su conductor": "Nesta posição está o seu motorista",
     "Hora esparada"         : "tempo esperado",
-    "Lenguaje"              : "Linguagem"
+    "Lenguaje"              : "Linguagem",
+    "Usuario"               : "Do utilizador",
+    "Contraseña"            : "Senha",
+    "Correo"                : "Correspondência",
+    "Correo electrónico"    : "Correio eletrônico"
 }

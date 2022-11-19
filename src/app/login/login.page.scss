@@ -32,7 +32,7 @@ ion-menu-button {
 }
 
 .contaier-login {
-  margin-top: 130px;
+  margin-top: 155px;
   width: 90%;
   padding: 10px;
   background: #FFFFFF;
@@ -226,4 +226,21 @@ padding: 5px;
 
 .contra {
   background-color: ligth;
+}
+
+.mundo {
+    max-width: 20px;
+    max-height: 20px;
+    float: left;
+    margin-left: 45%;
+    object-fit: calc(10);
+    height: 100px;
+    width: 200px;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.select {
+  float: center;
+  margin-right: 50%;
 }

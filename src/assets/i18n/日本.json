@@ -36,5 +36,9 @@
     "Tomar viaje"           : "旅行する",
     "En esta posicion se encuntra su conductor": "この位置にあなたのドライバーです",
     "Hora esparada"         : "予定の時間",
-    "Lenguaje"              : "言語"
+    "Lenguaje"              : "言語",
+    "Usuario"               : "ユーザー",
+    "Contraseña"            : "パスワード",
+    "Correo"                : "郵便",
+    "Correo electrónico"    : "Eメール"
 }
