@@ -37,8 +37,10 @@
     "En esta posicion se encuntra su conductor": "이 위치에 드라이버가 있습니다.",
     "Hora esparada"         : "예상 시간",
     "Lenguaje"              : "언어",
-    "Usuario"               : "Usuario",
+    "¿A dónde vas?"         : "어디 가세요?",
+    "Usuario"               : "사용자",
     "Contraseña"            : "비밀번호",
     "Correo"                : "우편",
-    "Correo electrónico"    : "이메일"
+    "Error en la credenciales" : "자격 증명 오류",
+    "El usuario a sido creado existosamente." : "사용자가 성공적으로 생성되었습니다." 
 }

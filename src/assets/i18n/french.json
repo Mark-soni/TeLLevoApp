@@ -37,8 +37,10 @@
     "En esta posicion se encuntra su conductor": "Dans cette position se trouve votre chauffeur",
     "Hora esparada"         : "heure prévue",
     "Lenguaje"              : "Langue",
+    "¿A dónde vas?"         : "Où vas-tu?",
     "Usuario"               : "Utilisateur",
     "Contraseña"            : "Mot de passe",
     "Correo"                : "Courrier",
-    "Correo electrónico"    : "Courrier électronique"
+    "Error en la credenciales" : "Erreur d'identifiants",
+    "El usuario a sido creado existosamente." : "L'utilisateur a été créé avec succès."
 }

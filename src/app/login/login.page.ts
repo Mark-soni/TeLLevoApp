@@ -20,9 +20,6 @@ export class LoginPage implements OnInit {
   mensaje: string
   langs: string[] = [];
   claseMensaje   : string
-  msg : string
-  creacionAlert : string
-  suxAlert : string
 
   //private servicio: LoginService
 
@@ -33,14 +30,37 @@ export class LoginPage implements OnInit {
                 this.langs = this.translateService.getLangs();
               }
 
-  ngOnInit() {
-    this.obtenerUsuario();
-    this.verificarLogin();
-  }
-
   changeLang(event) {
     this.translateService.use(event.detail.value);
     //console.log(event.detail.value)
+  }
+
+  ngOnInit() {
+    this.obtenerUsuario();
+    this.verificarLogin();
+    this.obtenerPalabrasPAC();
+  }
+
+  msgPAC : string
+  creacionPAC : string
+  suxPAC : string
+  
+  async obtenerPalabrasPAC() {
+    this.translateService.get('Error en la credenciales').subscribe(
+      (res: string) => {
+        this.msgPAC = res
+      }
+    )
+    this.translateService.get('Creación de cuenta').subscribe(
+      (res: string) => {
+        this.creacionPAC = res
+      }
+    )
+    this.translateService.get('Se ha creado su cuenta').subscribe(
+      (res: string) => {
+        this.suxPAC = res
+      }
+    )
   }
 
   async verificarLogin(){
@@ -98,45 +118,10 @@ export class LoginPage implements OnInit {
       this.loginFire(this.usuario.email,this.usuario.pass)
       this.router.navigate(['/home-conductor'])
     } else {
-      this.servicio.mensaje('Error en la credenciales')
+      this.servicio.mensaje(this.msgPAC)
     }
   }
 
-  //Dudas
-  async obtenerPalabrasAlert() {
-    this.translateService.get('Cuenta Registrada en la base de datos').subscribe(
-      (res: string) => {
-        this.msg = res
-      }
-    )
-    this.translateService.get('Creación de cuenta').subscribe(
-      (res: string) => {
-        this.creacionAlert = res
-      }
-    )
-    this.translateService.get('Se ha creado su cuenta').subscribe(
-      (res: string) => {
-        this.suxAlert = res
-      }
-    )
-  }
-
-  async registrar(nombre, email, pass) {
-    try{
-      const user = this.servicio//.registrar(email.value,pass.value)
-      if (user) {
-        console.log('User->',user)
-        //this.presentAlert();
-        //this.guard.GuardarServicio(nombre.value,email.value,pass.value)
-        this.servicio.mensaje(this.msg)
-        console.log('value->')
-      } 
-    }catch (error){
-      console.log('Error->',error)
-    }
-  }
-
-  //Dudas
 
   async loginFire(email, pass) {
     try {

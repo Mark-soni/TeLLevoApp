@@ -37,8 +37,10 @@
     "En esta posicion se encuntra su conductor": "In this position is your driver",
     "Hora esparada"         : "expected time",
     "Lenguaje"              : "Language",
+    "¿A dónde vas?"         : "Where are you going?",
     "Usuario"               : "User",
     "Contraseña"            : "Password",
-    "Correo"                : "Mail",
-    "Correo electrónico"    : "Email"
-}
+    "Correo"                : "Email",
+    "Error en la credenciales" : "Credentials error",
+    "El usuario a sido creado existosamente." : "The user has been created successfully."
+} 

@@ -37,8 +37,10 @@
     "En esta posicion se encuntra su conductor": "この位置にあなたのドライバーです",
     "Hora esparada"         : "予定の時間",
     "Lenguaje"              : "言語",
+    "¿A dónde vas?"         : "どこに行くの？",
     "Usuario"               : "ユーザー",
     "Contraseña"            : "パスワード",
     "Correo"                : "郵便",
-    "Correo electrónico"    : "Eメール"
+    "Error en la credenciales" : "資格情報エラー",
+    "El usuario a sido creado existosamente." : "ユーザーが正常に作成されました。"   
 }

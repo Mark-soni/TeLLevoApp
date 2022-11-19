@@ -9,7 +9,7 @@
     "Historial"             : "Borrelo para que no lo cachen",
     "Ayuda"                 : "Ayuda estan matando un weon",
     "Auto Disponible"       : "Autos Desocupado",
-    "|¿A dónde vas?"        : "|¿A dónde va tí@?",
+    "|¿A dónde vas?"        : "|¿A donde vai?",
     "Iniciar Sesión"        : "Inicio la Sesión",
     "Registrar"             : "Registrese",
     "¿Olvido la contraseña?": "¿Olvido la contraseña como tan weon?",
@@ -37,8 +37,6 @@
     "En esta posicion se encuntra su conductor": "En esta posicion se encuntra su conductor",
     "Hora esparada"         : "Hora esparada",
     "Lenguaje"              : "Idioma loco",
-    "Usuario"               : "Su usuario mi loco",
-    "Contraseña"            : "Contraseña",
-    "Correo"                : "Correo",
-    "Correo electrónico"    : "Correo electrónico"
+    "Error en la credenciales" : "esta mala Xd",
+    "El usuario a sido creado existosamente." : "Cuenta guardadada xd"
 }
