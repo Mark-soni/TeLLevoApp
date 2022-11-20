@@ -103,8 +103,8 @@ export class MapaComponent implements OnInit {
 
     directionService.route({
 
-      origin: 'Viña, Viña del mar',
-      destination: '-33.598648133456216, -70.57891732136557',
+      origin: this.mapa.getCenter(),
+      destination:  '-33.598401458927526, -70.57864252043787',
       travelMode: google.maps.TravelMode.DRIVING
 
     }, resultado => {

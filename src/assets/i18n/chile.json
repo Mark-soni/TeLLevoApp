@@ -33,7 +33,7 @@
     "Imagen"                : "Imagen" ,
     "Patente"               : "Patente" ,
     "Nombre"                : "Nombre",
-    "Tomar viaje"           : "Tomar viaje",
+    "Tomar Viaje"           : "Tomar viaje",
     "En esta posicion se encuntra su conductor": "En esta posicion se encuntra su conductor",
     "Hora esparada"         : "Hora esparada",
     "Lenguaje"              : "Idioma loco",
@@ -44,5 +44,9 @@
     "Correo Enviado"        : "Correo Enviau",
     "Le hemos enviado una nueva contraseña"  : "Le hemo enviao un nuea contra",
     "OK"                    : "Ta listo larva",
-    "Correo electrónico"    : "Su correo porfa"
+    "Correo electrónico"    : "Su correo porfa",
+    "Mapa"                  : "El mejor pais de chile",
+    "Calcular ruta"         : "Calculando",
+    "La distancia es"       : "Ta lejo",
+    "Login"                 : "Login"
 }

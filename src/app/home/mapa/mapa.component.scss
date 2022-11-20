@@ -6,7 +6,8 @@
 
 
 body {
-    margin: 0;
+    margin: 0px;
+    color: white;
   }
   
   .sb-title {
@@ -85,33 +86,29 @@ body {
     cursor: pointer;
   }
 
-  ion-content {
-    #map {
-      width: 100%;
-      height: 50%;
-      border-radius: 2%;
-      opacity: 0;
-      transition: opacity 150ms ease-in;
-      &.show-map{
-        opacity: 1;
-      -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
-      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
-      font-weight: bold;
-      font-size: medium;
-      margin-top: 2%;
-      
-      
-      display: flex;
-      
-      }
-    }
-  }
+  
+
+  
 
   .mapa {
-    width: 100%;
+    width: 95%;
     height: 50%;
+    border-radius: 3%;
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+    opacity: 1;
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 20%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
 }
+
+
   .color{
     margin-top: 5%;
     padding-top: 2%;
@@ -121,3 +118,100 @@ body {
   .carta{
     margin: 8px;
   }
+
+
+  .BotonA {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+  }
+
+  .BotonB {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+
+  .button {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #212121;
+  
+    padding: 18px;
+    border-radius: 5px;
+    color: #212121;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .button-5 {
+    position: relative;
+  }
+  
+  .button-5:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    border-bottom: 3px solid #212121;
+    border-right: 3px solid #212121;
+    transition: all 0.2s, opacity 0.1s 0.2s;
+    opacity: 0;
+  }
+  
+  .button-5:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    border-top: 3px solid #212121;
+    border-left: 3px solid #212121;
+    transition: all 0.2s, opacity 0.1s 0.2s;
+    opacity: 0;
+  }
+  
+  .button-5:hover:after, .button-5:hover:before {
+    width: calc(93% + 1px);
+    height: calc(93% + 1px);
+    transition: all 0.2s, opacity 0.1s;
+    opacity: 1;
+  }
+
+  .titulo{
+    text-align: center;
+    color: cadetblue;
+  }
+
+  .back{
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  
+    padding: 18px;
+    border-radius: 5px;
+    color: #212121;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10 15px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 50px;
+  }
+
+  

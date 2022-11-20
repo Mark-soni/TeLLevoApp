@@ -33,7 +33,7 @@
     "Imagen"                : "Picture",
     "Patente"               : "Patent",
     "Nombre"                : "Name",
-    "Tomar viaje"           : "take trip",
+    "Tomar Viaje"           : "take trip",
     "En esta posicion se encuntra su conductor": "In this position is your driver",
     "Hora esparada"         : "expected time",
     "Lenguaje"              : "Language",
@@ -47,5 +47,9 @@
     "Correo Enviado"        : "Email sent",
     "Le hemos enviado una nueva contraseña"  : "We have sent you a new password",
     "OK"                    : "OK",
-    "Correo electrónico"    : "Email"
+    "Correo electrónico"    : "Email",
+    "Mapa"                  : "Map",
+    "Calcular ruta"         : "Calculate route",
+    "La distancia es"       : "Distance is",
+    "Login"                 : "Login"
 } 

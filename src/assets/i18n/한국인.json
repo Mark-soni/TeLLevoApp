@@ -33,7 +33,7 @@
     "Imagen"                : "영상" ,
     "Patente"               : "특허" ,
     "Nombre"                : "이름",
-    "Tomar viaje"           : "여행하다",
+    "Tomar Viaje"           : "여행하다",
     "En esta posicion se encuntra su conductor": "이 위치에 드라이버가 있습니다.",
     "Hora esparada"         : "예상 시간",
     "Lenguaje"              : "언어",
@@ -47,5 +47,9 @@
     "Correo Enviado"        : "이메일을 보냈습니다",
     "Le hemos enviado una nueva contraseña"  : "새로운 비밀번호를 보내드렸습니다",
     "OK"                    : "좋아요",
-    "Correo electrónico"    : "이메일"          
+    "Correo electrónico"    : "이메일",
+    "Mapa"                  : "지도",
+    "Calcular ruta"         : "경로 계산",
+    "La distancia es"       : "거리는",
+    "Login"                 : "로그인"       
 }

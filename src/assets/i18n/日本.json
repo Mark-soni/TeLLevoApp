@@ -33,7 +33,7 @@
     "Imagen"                : "画像" ,
     "Patente"               : "特許" ,
     "Nombre"                : "名前",
-    "Tomar viaje"           : "旅行する",
+    "Tomar Viaje"           : "旅行する",
     "En esta posicion se encuntra su conductor": "この位置にあなたのドライバーです",
     "Hora esparada"         : "予定の時間",
     "Lenguaje"              : "言語",
@@ -47,5 +47,10 @@
     "Correo Enviado"        : "メールを送信しました",
     "Le hemos enviado una nueva contraseña"  : "新しいパスワードをお送りしました",
     "OK"                    : "わかった",
-    "Correo electrónico"    : "Eメール"     
+    "Correo electrónico"    : "Eメール",
+    "Mapa"                  : "地図",
+    "Calcular ruta"         : "ルートを計算する",
+    "La distancia es"       : "距離は",
+    "Login"                 : "ログイン"
+    
 }

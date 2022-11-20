@@ -33,7 +33,7 @@
     "Imagen"                : "Image",
     "Patente"               : "Brevet",
     "Nombre"                : "nom",
-    "Tomar viaje"           : "faire un voyage",
+    "Tomar Viaje"           : "faire un voyage",
     "En esta posicion se encuntra su conductor": "Dans cette position se trouve votre chauffeur",
     "Hora esparada"         : "heure prévue",
     "Lenguaje"              : "Langue",
@@ -47,5 +47,9 @@
     "Correo Enviado"        : "Email envoyé",
     "Le hemos enviado una nueva contraseña"  : "Nous vous avons envoyé un nouveau mot de passe",
     "OK"                    : "d'accord",
-    "Correo electrónico"    : "Courrier électronique"
+    "Correo electrónico"    : "Courrier électronique",
+    "Mapa"                  : "Carte",
+    "Calcular ruta"         : "Calculer l'itinéraire",
+    "La distancia es"       : "La distance est",
+    "Login"                 : "Connexion"
 }

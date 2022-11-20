@@ -14,7 +14,7 @@
   <ion-list>
     <ion-item>
       
-      <ion-icon name="home-sharp"></ion-icon> <ion-label>⠀{{ "Bienvenido" | translate }}: {{ usuario }}</ion-label> 
+      <ion-icon name="home-sharp"></ion-icon> <ion-label style="margin-left: 10px;">{{ "Bienvenido" | translate }}: {{ usuario }}</ion-label> 
 
     </ion-item>
 
@@ -46,6 +46,11 @@
     <ion-item [routerLink]="['/login']">
       <ion-icon name="log-in-sharp" slot="start"></ion-icon>
       <ion-label>{{ "Cerrar sesión" | translate }}</ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/scan']">
+      <ion-icon name="scan-outline"></ion-icon>
+      <ion-label class="scan">{{ "scan" | translate }}</ion-label>
     </ion-item>
     
   </ion-list>

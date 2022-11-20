@@ -1,6 +1,6 @@
 <ion-header>
     <ion-toolbar color="dark">
-    <ion-title style="text-align:center"></ion-title>
+    <ion-title style="text-align:center"> {{ 'Login' | translate }}</ion-title>
     <ion-buttons slot="start">
     </ion-buttons>
   </ion-toolbar>
@@ -40,7 +40,7 @@
   
                       <ion-item>
                         <ion-icon name="person-sharp" class="icon-login"></ion-icon>
-                        <ion-input name="user" type="text" required placeholder="{{ 'Usuario' | translate }}" #txtEmail></ion-input>
+                        <ion-input  name="user" type="text" required placeholder="{{ 'Usuario' | translate }}" #txtEmail></ion-input>
                     </ion-item>
                     <br />
                     <ion-item>

@@ -33,7 +33,7 @@
     "Imagen"                : "Imagen" ,
     "Patente"               : "Patente" ,
     "Nombre"                : "Nombre" ,
-    "Tomar viaje"           : "Tomar viaje",
+    "Tomar Viaje"           : "Tomar Viaje",
     "En esta posicion se encuntra su conductor": "En esta posicion se encuntra su conductor",
     "Hora esparada"         : "Hora esparada",
     "Lenguaje"              : "Lenguaje",
@@ -47,5 +47,9 @@
     "Correo Enviado"        : "Correo Enviado",
     "Le hemos enviado una nueva contraseña"  : "Le hemos enviado una nueva contraseña",
     "OK"                    : "OK",
-    "Correo electrónico"    : "Correo electronico"
+    "Correo electrónico"    : "Correo electronico",
+    "Mapa"                  : "Mapa",
+    "Calcular ruta"         : "Calcular ruta",
+    "La distancia es"       : "La distancia es",
+    "Login"                 : "Login"
 }
