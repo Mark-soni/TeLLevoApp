@@ -9,7 +9,11 @@
 
 
 <ion-content> 
-  <div class="mapa" #divMap></div>
+
+  <button (click)="mapRuta()">Calcular ruta</button>
+  <h1>La distancia es: {{distancia}}</h1>
+
+<div class="mapa" #divMap></div>
 <div class="formulario">
     <form [formGroup]="formMapas" (ngSubmit)="onSubmit()">
       <input type="text" #inputPlaces id="inputPlaces" formControlName="busqueda">
@@ -25,6 +29,7 @@
       </div>
     </form>
   </div>   
+  
     <ion-card class="color">
       <img src="{{ conductor.imagen }}" alt="">
 

@@ -27,6 +27,7 @@ export class MapaComponent implements OnInit {
   latitudvar : any;
   conductor: Homes
 
+
   constructor(private renderer: Renderer2,
               private activatedRoute: ActivatedRoute,
               private servicio: HomeService,
@@ -45,6 +46,7 @@ export class MapaComponent implements OnInit {
       ciudad: new FormControl(''),
       provincia: new FormControl(''),
       region: new FormControl('')
+
     })
   }
 
@@ -55,6 +57,7 @@ export class MapaComponent implements OnInit {
       console.log(this.conductor)
     })
   }
+  
  
   ngAfterViewInit(): void {
 
@@ -100,8 +103,8 @@ export class MapaComponent implements OnInit {
 
     directionService.route({
 
-      origin: 'Quilpué, Chile',
-      destination: 'Viña del Mar, Chile',
+      origin: 'Viña, Viña del mar',
+      destination: '-33.598648133456216, -70.57891732136557',
       travelMode: google.maps.TravelMode.DRIVING
 
     }, resultado => {
@@ -184,18 +187,17 @@ export class MapaComponent implements OnInit {
   };
 
   cargarMapa(position: any): any {
-
     const opciones = {
+
       center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-      zoom: 12,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      zoom: 17,
+      mapTypeId: google.maps.MapTypeId.TERRAIN
     };
-
     this.mapa = new google.maps.Map(this.renderer.selectRootElement(this.divMap.nativeElement), opciones)
-
+    
     const markerPosition = new google.maps.Marker({
       position: this.mapa.getCenter(),
-      title: "David",
+      title: "Mi Ubicación",
     });
 
     markerPosition.setMap(this.mapa);

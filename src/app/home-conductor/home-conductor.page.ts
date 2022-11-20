@@ -1,3 +1,4 @@
+///<reference path="C:/Users/marce/OneDrive/Escritorio/Mapa/node_modules/@types/googlemaps/index.d.ts"/>
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
@@ -7,15 +8,10 @@ import { FirebaseService } from '../services/firebase.service';
 import { HomeService } from '../home/home.service';
 import { Homec } from './homec';
 import { TranslateService } from '@ngx-translate/core';
-declare var google;
+import { FormControl, FormGroup } from '@angular/forms'
+import { ElementRef, ViewChild, Renderer2 } from '@angular/core'
 
-interface Marker {
-  position: {
-    lat: number,
-    lng: number,
-  };
-  title: string;
-}
+
 
 @Component({
   selector: 'app-home-conductor',
@@ -24,20 +20,19 @@ interface Marker {
 })
 export class HomeConductorPage implements OnInit {
 
+  @ViewChild('divMap') divMap!: ElementRef;
+  @ViewChild('inputPlaces') inputPlaces!: ElementRef;
+
   cliente: string
   conductor = []
   usuario: any;
   langs: string[] = [];
-  map = null;
-  markers: Marker[] = [
-    {
-      position: {
-        lat: -33.59857729446596,
-        lng: -70.57907975407208,
-      },
-      title: 'Duoc UC: Sede Puente Alto'
-    },
-  ];
+  mapa!: google.maps.Map;
+  markers: google.maps.Marker[];
+  distancia!: string;
+  formMapas!: FormGroup;
+  longitudvar : any;
+  latitudvar : any;
 
   constructor(private servicio: HomeService,
               private router: Router,
@@ -45,48 +40,173 @@ export class HomeConductorPage implements OnInit {
               private activatedRoute: ActivatedRoute,
               private alerta: AlertController,
               private fire: FirebaseService,
-              private translateService: TranslateService) {
-      this.langs = this.translateService.getLangs();
-    }
+              private translateService: TranslateService,
+              private renderer: Renderer2) {
+                this.langs = this.translateService.getLangs();
+                this.markers = [];
 
-    loadMap() {
-      // create a new map by passing HTMLElement
-      const mapEle: HTMLElement = document.getElementById('map');
-      // create LatLng object
-      const myLatLng = {lat: -33.59810885062359, lng: -70.57856298587099}; 
-      // create map
-      this.map = new google.maps.Map(mapEle, {
-        center: myLatLng,
-        zoom: 14
-      });
-    
-      google.maps.event.addListenerOnce(this.map, 'idle', () => {
-        mapEle.classList.add('show-map');
-        this.renderMarkers();
-      });
-    }
+              this.formMapas = new FormGroup({
 
-    renderMarkers() {
-      this.markers.forEach(marker => {
-        this.addMarker(marker);
-      });
-    }
-
-    addMarker(marker: Marker) {
-      return new google.maps.Marker({
-        position: marker.position,
-        map: this.map,
-        title: marker.title
-      });
+                  busqueda: new FormControl(''),
+                  direccion: new FormControl(''),
+                  referencia: new FormControl(''),
+                  ciudad: new FormControl(''),
+                  provincia: new FormControl(''),
+                  region: new FormControl('')
+    })
+      
     }
 
 
     ngOnInit() {
-      //this.conductor = this.servicio.obtenerHomes()= ya no se usa
-      //this.cliente = this.activatedRoute.snapshot.paramMap.get("user")= ya no se usa
       this.validacion();
-      this.loadMap();
   }
+
+  ngAfterViewInit(): void {
+
+    const opciones = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    }
+
+    if (navigator.geolocation) {
+
+      navigator.geolocation.getCurrentPosition(async (position) => {
+        console.log('longitude =>',position.coords.longitude)
+        this.longitudvar = position.coords.longitude;
+        this.latitudvar = position.coords.latitude;
+        console.log('latitude =>',position.coords.latitude)
+        await this.cargarMapa(position);
+        this.cargarAutocomplete();
+
+      }, null, opciones);
+
+
+    } else {
+      console.log("navegador no compatible")
+    }
+
+  };
+
+
+
+  onSubmit() {
+    console.log("Datos del formulario: ", this.formMapas.value)
+  };
+
+
+  //calcular ruta
+  mapRuta() {
+
+    const directionService = new google.maps.DirectionsService();
+    const directionRender = new google.maps.DirectionsRenderer();
+
+    directionRender.setMap(this.mapa);
+
+    directionService.route({
+
+      origin: 'Quilpué, Chile',
+      destination: 'Viña del Mar, Chile',
+      travelMode: google.maps.TravelMode.DRIVING
+
+    }, resultado => {
+      console.log(resultado);
+      directionRender.setDirections(resultado);
+
+      this.distancia = resultado.routes[0].legs[0].distance.text;
+
+    });
+
+  }
+
+
+
+  private cargarAutocomplete() {
+
+    const autocomplete = new google.maps.places.Autocomplete(this.renderer.selectRootElement(this.inputPlaces.nativeElement), {
+      componentRestrictions: {
+        country: ["CL"]
+      },
+      fields: ["address_components", "geometry"],
+      types: ["address"],
+    })
+
+
+    google.maps.event.addListener(autocomplete, 'place_changed', () => {
+
+      const place: any = autocomplete.getPlace();
+      console.log("el place completo es:", place)
+
+      this.mapa.setCenter(place.geometry.location);
+      const marker = new google.maps.Marker({
+        position: place.geometry.location
+      });
+
+      marker.setMap(this.mapa);
+      this.llenarFormulario(place);
+    })
+  }
+
+  llenarFormulario(place: any) {
+
+    const addressNameFormat: any = {
+      'street_number': 'short_name',
+      'route': 'long_name',
+      'administrative_area_level_1': 'short_name',
+      'administrative_area_level_2': 'short_name',
+      'administrative_area_level_3': 'short_name',
+      'country': 'long_name',
+
+    };
+
+    const getAddressComp = (type: any) => {
+      for (const component of place.address_components) {
+        if (component.types[0] === type) {
+
+          return component[addressNameFormat[type]];
+        }
+      }
+      return ' '
+    };
+
+    const componentForm = {
+      direccion: 'location',
+      ciudad: "administrative_area_level_3",
+      provincia: 'administrative_area_level_2',
+      region: 'administrative_area_level_1'
+    };
+
+
+
+
+    Object.entries(componentForm).forEach(entry => {
+      const [key, value] = entry;
+
+      this.formMapas.controls[key].setValue(getAddressComp(value))
+    });
+
+    this.formMapas.controls['direccion'].setValue(getAddressComp('route') + ' ' + getAddressComp('street_number'))
+  };
+
+  cargarMapa(position: any): any {
+
+    const opciones = {
+      center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+      zoom: 17,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    this.mapa = new google.maps.Map(this.renderer.selectRootElement(this.divMap.nativeElement), opciones)
+
+    const markerPosition = new google.maps.Marker({
+      position: this.mapa.getCenter(),
+      title: "David",
+    });
+
+    markerPosition.setMap(this.mapa);
+    this.markers.push(markerPosition);
+  };
 
   ionViewWillEnter() {
     //this.conductor = this.servicio.obtenerHomes()= ya no se usa

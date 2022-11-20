@@ -1,14 +1,4 @@
 
- .botonImg{
-    background-image    : url ( " imagen.jpg " ) ;
-    background-repeat   : no - repeat ;
-    background-size     : contain ;
-    height      :200px;
-    width       :350px ;
-    justify-content: center;
-    display: flex;
-} 
-
 .Bienvenido {
     color: white;
     border-color: black;
@@ -109,25 +99,87 @@
     height: 1700px;
   }
   
-  ion-content {
-    #map {
-      margin-right: 10%;
-      border-radius: 2%;
-      width: 100%;
-      height: 86%;
-      opacity: 0;
-      transition: opacity 150ms ease-in;
-      display: block;
-      &.show-map{
-        opacity: 1;
-      }
-    }
-  }
-  
   .BotonP {
     display: flex;
     justify-content: center;
     
   }
+
+  #inputPlaces{
+    padding: 10px;
+      width: 600px;
+      height: 40px;
+  }
+  
+    
+    
+    
+    
+    
+    .panel {
+      background: white;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+    
+    .half-input-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .half-input {
+      max-width: 120px;
+    }
+    
+    
+    h2 {
+      margin: 0;
+      font-family: Roboto, sans-serif;
+    }
+    
+    input {
+      height: 30px;
+    }
+    
+    input {
+      border: 0;
+      border-bottom: 1px solid black;
+      font-size: 14px;
+      font-family: Roboto, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+    }
+    
+    input:focus::placeholder {
+      color: white;
+    }
+    
+    .button-cta {
+      height: 40px;
+      width: 40%;
+      background: #3367d6;
+      color: white;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-family: Roboto, sans-serif;
+      border: 0;
+      border-radius: 3px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.48);
+      cursor: pointer;
+    }
+  
+  
+    .mapa {
+      width: 100%;
+      height: 85%;
+      font-size: medium;
+      font-weight: bold;
+      margin-bottom: 2%;
+  }
+    
+  
+
 
   
