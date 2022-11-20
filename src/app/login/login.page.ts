@@ -41,6 +41,13 @@ export class LoginPage implements OnInit {
     this.obtenerPalabrasPAC();
   }
 
+  ionViewWillEnter() {
+    //this.usuarios = this.servicio.obtenerUsuarios()
+    this.obtenerPalabrasPAC();
+    this.obtenerUsuario();
+    this.verificarLogin();
+  }
+
   msgPAC : string
   creacionPAC : string
   suxPAC : string

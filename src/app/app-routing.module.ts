@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { DetallePageModule } from './home/detalle/detalle.module';
+import { MapaComponent } from './home/mapa/mapa.component';
 
 const routes: Routes = [
   {
@@ -15,8 +16,11 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
       },
       {
-        path: ':id',
+        path: '',
         loadChildren: () => import('./home/detalle/detalle.module').then(m => m.DetallePageModule)
+      },
+      {
+        path: ':id', component : MapaComponent
       }
     ]
   },
@@ -67,7 +71,11 @@ const routes: Routes = [
   {
     path: 'strapip',
     loadChildren: () => import('./strapip/strapip.module').then( m => m.StrapipPageModule)
-  }
+  },
+  {
+    path: 'detalle',
+    loadChildren: () => import('./home/detalle/detalle.module').then(m => m.DetallePageModule)
+  },
 ];
 
 @NgModule({

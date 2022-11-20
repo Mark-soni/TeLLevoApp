@@ -1,14 +1,30 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title >{{ "Detalles" | translate }}</ion-title>
+    <ion-title >{{ "Mapa" | translate }}</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>    
-    <div id="map"></div>
+
+<ion-content> 
+  <div class="mapa" #divMap></div>
+<div class="formulario">
+    <form [formGroup]="formMapas" (ngSubmit)="onSubmit()">
+      <input type="text" #inputPlaces id="inputPlaces" formControlName="busqueda">
+      <div class="form panel">
+        <input type="text" placeholder= "{{ 'Direccion' | translate }}" formControlName="direccion" />
+        <input type="text" placeholder="{{ 'Edificio, departamento, piso (opcional)' | translate }}" formControlName="referencia" />
+        <input type="text" placeholder= "{{ 'Ciudad' | translate }}" class="ciudad" formControlName="ciudad" />
+        <input type="text" placeholder="{{ 'Provincia' | translate }}" formControlName="provincia" />
+        <div class="half-input-container">
+          <input type="text" class="half-input" placeholder="{{ 'Region' | translate }}" formControlName="region" />
+        </div>
+        <button class="button-cta" type="submit">{{ "Guardar" | translate }}</button>
+      </div>
+    </form>
+  </div>   
     <ion-card class="color">
       <img src="{{ conductor.imagen }}" alt="">
 
@@ -26,6 +42,5 @@
     <ion-card-content class="carta"> {{ "Hora esparada" | translate }}: {{ conductor.hora }} </ion-card-content>
     <ion-card-content class="carta"> {{ "Área" | translate }}: {{ conductor.area }}</ion-card-content>
   </ion-card>
-
     <ion-button (click)="presentAlert2()" class="btnDetalle" expand="block" fill="outline" (click)="showModal()">{{ "Tomar viaje" | translate }}</ion-button>
 </ion-content>

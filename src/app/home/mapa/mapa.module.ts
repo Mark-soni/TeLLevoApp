@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { DetallePageRoutingModule } from './detalle-routing.module';
-import { DetallePage } from './detalle.page';
+import { FormsModule } from '@angular/forms';
+import { MapaPageRoutingModule } from './mapa-routing.module';
 
 // CAMBIO IDIOMA
 import { TranslateModule } from '@ngx-translate/core';
+import { MapaComponent } from './mapa.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    DetallePageRoutingModule,
+    MapaPageRoutingModule,
     TranslateModule
   ],
-  declarations: [DetallePage]
+  declarations: [MapaComponent]
 })
-export class DetallePageModule {}
+export class MapaModule {}

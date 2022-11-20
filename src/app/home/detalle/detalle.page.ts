@@ -4,9 +4,11 @@ import { AlertController } from '@ionic/angular';
 import { HomeService } from '../home.service';
 import { Homes } from '../homes';
 import { ModalController } from '@ionic/angular';
-
+import { TranslateService } from '@ngx-translate/core';
 //import { ModalExampleComponent } from '..detalle/';
 import Swal from 'sweetalert2';
+
+
 
 @Component({
   selector: 'app-detalle',
@@ -18,13 +20,16 @@ export class DetallePage implements OnInit {
   conductor: Homes
   handlerMessage = '';
   roleMessage = '';
-
+  
   constructor(private activatedRoute: ActivatedRoute,
               private servicio: HomeService,
               private alerta: AlertController,
               private router: Router ,
               private modalCtrl: ModalController,
-              private alertController: AlertController) { }
+              private alertController: AlertController,
+              private translateService: TranslateService) { }
+
+              
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe( paramMap => {

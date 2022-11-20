@@ -9,6 +9,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  title = 'mapa';
   constructor(private router: Router, private platform: Platform,private translateService: TranslateService) {
     this.translateService.setDefaultLang('español');
 	  this.translateService.addLangs(['español','french', 'english','português','日本','한국인','chile']);
