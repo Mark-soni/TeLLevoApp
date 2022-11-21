@@ -1,18 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+
 
 @Component({
   selector: 'app-lector-qr',
   templateUrl: './lector-qr.page.html',
   styleUrls: ['./lector-qr.page.scss'],
 })
-export class LectorQrPage implements OnInit {
+export class LectorQrPage implements OnDestroy {
 
   qrCodeString = 'This is a secret qr code message';
   scannedResult: any;
   content_visibility = '';
 
-  constructor() { }
+  constructor(
+    // private barcodeScanner: BarcodeScanner
+    ) {}
+
+  // startScan() {
+  //   this.barcodeScanner.scan().then(barcodeData => {
+  //     console.log('Barcode data', barcodeData);
+  //     this.scannedResult = barcodeData?.text;
+  //    }).catch(err => {
+  //        console.log('Error', err);
+  //    });
+  // }
 
   async checkPermission() {
     try {
@@ -59,8 +71,8 @@ export class LectorQrPage implements OnInit {
     this.content_visibility = '';
   }
 
-  ngOnInit() {
-    this.stopScan();
+  ngOnDestroy(): void {
+      this.stopScan();
   }
 
 }

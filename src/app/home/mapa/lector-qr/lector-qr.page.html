@@ -9,11 +9,11 @@
 
 
   
-<ion-content> <!--logi-->
+<ion-content [style.visibility]="content_visibility"> <!--logi-->
 
   <ion-grid class="grid1">
     
-      <ion-row class="row1">
+      <ion-row class="row9">
           <ion-col>
             <div>
               <img class="Pin" src="assets/Prueba3.png" >
@@ -21,7 +21,7 @@
             </div>
           </ion-col>
       </ion-row>     
-      <ion-row class="row2">
+      <ion-row class="row0">
           <ion-col>
             
           </ion-col>
@@ -45,21 +45,21 @@
           <ion-row>
               <ion-col>
                 <ion-item *ngIf="scannedResult">
-                  <ion-label class="ion-text-wrap"> Verificación: {{scannedResult}}</ion-label>
+                  <ion-label class="ion-text-wrap"> {{ "Verificación" | translate }}: {{scannedResult}}</ion-label>
                 </ion-item>
               
                 <ion-button 
                   expand="block" 
                   class="ion-margin" 
                   (click)="startScan()">
-                  Escanear QR
+                  {{ "Escanear QR" | translate }}
                 </ion-button>
               </ion-col>
           </ion-row>
           <ion-row>
               <ion-col>
                   <ion-label>
-                      <h3 class="contra">{{ "Al escanear el código Qr su viaje será registrado y finalizado de forma exitosa, para la verificación de la App" | translate }}</h3>
+                      <h3 class="contra">{{ "Al escanear el código Qr su viaje será registrado y finalizado de forma exitosa, para la verificación de la App" | translate }}</h3>              
                   </ion-label>
               </ion-col>
           </ion-row>

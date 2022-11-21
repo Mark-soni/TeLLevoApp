@@ -51,6 +51,11 @@
     "Mapa"                  : "地図",
     "Calcular ruta"         : "ルートを計算する",
     "La distancia es"       : "距離は",
-    "Login"                 : "ログイン"
+    "Login"                 : "ログイン",
+    "Recuerde que el usuario debe escanear el código QR para la verificación" : "ユーザーは確認のために QR コードをスキャンする必要があることに注意してください。",
+    "QR Code"               : "QRコード",
+    "Verificación"          : "検証",
+    "Escanear QR"           : "エスカニアQR",
+    "Al escanear el código Qr su viaje será registrado y finalizado de forma exitosa, para la verificación de la App" : "Qrコードをスキャンすることで、旅行が登録され、アプリの検証のために正常に完了します"
     
 }

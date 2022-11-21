@@ -20,6 +20,7 @@ export class LoginPage implements OnInit {
   mensaje: string
   langs: string[] = [];
   claseMensaje   : string
+  idioma = []
 
   //private servicio: LoginService
 

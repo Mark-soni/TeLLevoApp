@@ -20,6 +20,7 @@ export class DetallePage implements OnInit {
   conductor: Homes
   handlerMessage = '';
   roleMessage = '';
+  showModal: any;
   
   constructor(private activatedRoute: ActivatedRoute,
               private servicio: HomeService,

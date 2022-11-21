@@ -51,5 +51,10 @@
     "Mapa"                  : "지도",
     "Calcular ruta"         : "경로 계산",
     "La distancia es"       : "거리는",
-    "Login"                 : "로그인"       
+    "Login"                 : "로그인",
+    "Recuerde que el usuario debe escanear el código QR para la verificación" : "사용자는 확인을 위해 QR 코드를 스캔해야 합니다.",
+    "QR Code"               : "QR 코드",
+    "Verificación"          : "검증",
+    "Escanear QR"           : "에스카니에르 QR",
+    "Al escanear el código Qr su viaje será registrado y finalizado de forma exitosa, para la verificación de la App" : "Qr 코드를 스캔하면 여행이 등록되고 앱 인증을 위해 성공적으로 완료됩니다."
 }

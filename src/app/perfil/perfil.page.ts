@@ -17,6 +17,7 @@ export class PerfilPage implements OnInit {
     conductor = []
     Titulo = "Auto Disponibles"
     usuario: any;
+    doPuLl: any;
   
     constructor(
                 private menu: MenuController,

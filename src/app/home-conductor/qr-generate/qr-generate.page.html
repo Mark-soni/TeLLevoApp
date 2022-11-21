@@ -19,16 +19,7 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-button 
-    expand="block" 
-    class="ion-margin" 
-    (click)="startScan()">
-    Scan QR Code
-  </ion-button>
-
-  <ion-item *ngIf="scannedResult">
-    <ion-label class="ion-text-wrap">Scanned Result: {{scannedResult}}</ion-label>
-  </ion-item>
+  <h2 class="escritura"> {{ "Recuerde que el usuario debe escanear el código QR para la verificación" | translate }}</h2>
 
 </ion-content>
 

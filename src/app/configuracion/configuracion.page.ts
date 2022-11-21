@@ -10,6 +10,7 @@ export class ConfiguracionPage implements OnInit {
 
   darkMode: boolean = true;
   langs: string[] = [];
+  idioma = [];
 
   constructor(private translateService: TranslateService) {
     this.langs = this.translateService.getLangs(); }

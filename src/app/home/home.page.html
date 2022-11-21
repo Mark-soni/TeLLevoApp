@@ -70,7 +70,7 @@
 
   <!--Cartas inicio-->
     <ion-list>
-      <ion-item *ngFor="let aux of conductor" [routerLink]="['/home',id ]">
+      <ion-item *ngFor="let aux of conductor" [routerLink]="['/home',aux.id ]">
         <ion-card class="color">
           <img src="{{ aux.imagen }}" alt="">
 

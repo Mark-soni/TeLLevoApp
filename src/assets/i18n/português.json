@@ -51,5 +51,10 @@
     "Mapa"                  : "Mapa",
     "Calcular ruta"         : "Calcular rota",
     "La distancia es"       : "Distância é",
-    "Login"                 : "Conecte-se"
+    "Login"                 : "Conecte-se",
+    "Recuerde que el usuario debe escanear el código QR para la verificación" : "Lembre-se que o usuário deve digitalizar o código QR para verificação",
+    "QR Code"               : "Código QR",
+    "Verificación"          : "Verificação",
+    "Escanear QR"           : "Escanear QR",
+    "Al escanear el código Qr su viaje será registrado y finalizado de forma exitosa, para la verificación de la App" : "Ao escanear o Qr code sua viagem será registrada e concluída com sucesso, para verificação do App"
 }
