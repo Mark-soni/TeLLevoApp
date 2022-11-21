@@ -6,7 +6,11 @@ const routes: Routes = [
   {
     path: '',
     component: MapaComponent,
+  },  {
+    path: 'lector-qr',
+    loadChildren: () => import('./lector-qr/lector-qr.module').then( m => m.LectorQrPageModule)
   }
+
   
 ];
 

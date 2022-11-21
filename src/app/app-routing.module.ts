@@ -79,6 +79,10 @@ const routes: Routes = [
   {
     path: 'qr-generate',
     loadChildren: () => import('./home-conductor/qr-generate/qr-generate.module').then( m => m.QrGeneratePageModule)
+  },
+  {
+    path: 'lector-qr',
+    loadChildren: () => import('./home/mapa/lector-qr/lector-qr.module').then( m => m.LectorQrPageModule)
   }
 ];
 

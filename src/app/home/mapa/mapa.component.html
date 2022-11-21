@@ -35,8 +35,13 @@
     <ion-card-content class="carta"> {{ "Hora esparada" | translate }}: {{ conductor.hora }} </ion-card-content>
     <ion-card-content class="carta"> {{ "Área" | translate }}: {{ conductor.area }}</ion-card-content>
   </ion-card>
-<div class="BotonB">
-  <button  class="button button-5"> {{ "Tomar Viaje" | translate }} </button>
-</div>
+  <div class="form-group" style="margin-top: 12px ;">
+    <button class="button button-5" ><ion-icon name="car-sport-sharp"></ion-icon> {{ "Tomar Viaje" | translate }}</button>
+    <button class="button button-5" [routerLink]="['/lector-qr']"><ion-icon name="scan-sharp"></ion-icon> {{ "QR Code" | translate }}</button>
+  </div>
+
+
+
+
 </ion-content>
 </body>
