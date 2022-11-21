@@ -78,7 +78,6 @@ export class HomeConductorPage implements OnInit {
         this.latitudvar = position.coords.latitude;
         console.log('latitude =>',position.coords.latitude)
         await this.cargarMapa(position);
-        this.cargarAutocomplete();
 
       }, null, opciones);
 
@@ -122,31 +121,10 @@ export class HomeConductorPage implements OnInit {
 
 
 
-  private cargarAutocomplete() {
-
-    const autocomplete = new google.maps.places.Autocomplete(this.renderer.selectRootElement(this.inputPlaces.nativeElement), {
-      componentRestrictions: {
-        country: ["CL"]
-      },
-      fields: ["address_components", "geometry"],
-      types: ["address"],
-    })
+  
 
 
-    google.maps.event.addListener(autocomplete, 'place_changed', () => {
-
-      const place: any = autocomplete.getPlace();
-      console.log("el place completo es:", place)
-
-      this.mapa.setCenter(place.geometry.location);
-      const marker = new google.maps.Marker({
-        position: place.geometry.location
-      });
-
-      marker.setMap(this.mapa);
-      this.llenarFormulario(place);
-    })
-  }
+    
 
   llenarFormulario(place: any) {
 

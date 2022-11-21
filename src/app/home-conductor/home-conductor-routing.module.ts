@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeConductorPage
+  },
+  {
+    path: 'qr-generate',
+    loadChildren: () => import('./qr-generate/qr-generate.module').then( m => m.QrGeneratePageModule)
   }
 ];
 

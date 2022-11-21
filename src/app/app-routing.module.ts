@@ -76,6 +76,10 @@ const routes: Routes = [
     path: 'detalle',
     loadChildren: () => import('./home/detalle/detalle.module').then(m => m.DetallePageModule)
   },
+  {
+    path: 'qr-generate',
+    loadChildren: () => import('./home-conductor/qr-generate/qr-generate.module').then( m => m.QrGeneratePageModule)
+  }
 ];
 
 @NgModule({
