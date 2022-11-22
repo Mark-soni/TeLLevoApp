@@ -16,25 +16,8 @@
   <div class="BotonA">
   <button class="button button-5"  (click)="mapRuta()">{{ "Calcular ruta" | translate }}</button>
   </div>
-  <h1 style="margin-left: 15px;">{{ "La distancia es" | translate }}: {{distancia}}</h1>
+  <h1 class="err" style="margin-left: 15px;">{{ "La distancia es" | translate }}: {{distancia}}</h1>
   
-    <ion-card class="color">
-      <img src="{{ conductor.imagen }}" alt="">
-
-      <ion-card-header>
-        <ion-card-subtitle>{{ conductor.tipoAuto }} 
-        <ion-icon name="person-sharp"></ion-icon> 
-        {{ conductor.capacidad }} 
-        </ion-card-subtitle>
-        <ion-card-title class="nombreC"> 
-          {{ conductor.nombre }} 
-        </ion-card-title>
-      </ion-card-header>
-    <ion-card-content class="carta"> {{ "Precio" | translate }}: {{ conductor.precio }} </ion-card-content>
-    <ion-card-content class="carta"> {{ "Patente" | translate }}: {{ conductor.patente }} </ion-card-content>
-    <ion-card-content class="carta"> {{ "Hora esparada" | translate }}: {{ conductor.hora }} </ion-card-content>
-    <ion-card-content class="carta"> {{ "Área" | translate }}: {{ conductor.area }}</ion-card-content>
-  </ion-card>
   <div class="form-group" style="margin-top: 12px ;">
     <button class="button button-5" ><ion-icon name="car-sport-sharp"></ion-icon> {{ "Tomar Viaje" | translate }}</button>
     <button class="button button-5" [routerLink]="['/lector-qr']"><ion-icon name="scan-sharp"></ion-icon> {{ "QR Code" | translate }}</button>

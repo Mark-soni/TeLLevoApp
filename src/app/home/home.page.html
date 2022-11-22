@@ -17,7 +17,7 @@
   <ion-list>
     <ion-item>
       
-      <ion-icon name="home-sharp"></ion-icon> <ion-label style="margin-left: 10px;">{{ "Bienvenido" | translate }}: TEST{{ usuario }}</ion-label> 
+      <ion-icon name="home-sharp"></ion-icon> <ion-label style="margin-left: 10px;">{{ "Bienvenido" | translate }}: {{ usuario }}</ion-label> 
 
     </ion-item>
 
@@ -82,6 +82,8 @@
           
           <ion-card-content > "{{ 'Precio'| translate  }}": {{ aux.precio }} </ion-card-content>
         <ion-card-content> "{{ 'Patente'| translate  }}": {{ aux.patente }} </ion-card-content>
+        <ion-card-content class="carta"> {{ "Hora esparada" | translate }}: {{ aux.hora }} </ion-card-content>
+        <ion-card-content class="carta"> {{ "Área" | translate }}: {{ aux.area }}</ion-card-content>
       </ion-card>
     </ion-item>
     </ion-list>
